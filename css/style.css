@@ -1,0 +1,426 @@
+body {
+	font-family: 'Jura', sans-serif;
+}
+
+.crd-container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 20px;
+}
+.card {
+	border: 1px solid #000;
+	border-radius: 5px;
+	height: 200px;
+	width: 140px;
+	padding: 5px;
+	margin-top: 10px;
+	position: relative;
+	box-shadow: 2px 2px 2px rgba(13, 13, 13, 0.30);
+	opacity: 1;
+}
+.card-red {
+	color: red;
+}
+.card p,
+.card div {
+	line-height: 1;
+	font-size: 20px;
+}
+.sign {
+	position: relative;
+	margin-bottom: 0;
+}
+
+.lower-sign {
+	transform: rotate(180deg);
+	display: block;
+	top: 68%;
+}
+.card img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 90%;
+}
+.card i {
+	font-size: 40px;
+	line-height: 40px;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	margin: auto;
+}
+.card-back {
+	min-width: 140px;
+	border-radius: 5px;
+	background: transparent;
+	position: relative;
+}
+.face.back {
+	background: url('../img/card-back.jpg') 100% 100%;
+}
+.card-back:hover {
+	transform: rotateX(180deg);
+	-webkit-transform-style: preserve3d;
+	background: url('../img/card-back.jpg') 100% 100%;
+}
+.card-back:hover .card {
+	visibility: hidden;
+	transition: visibility 0s;
+	transform: rotateY(180deg);
+}
+
+.card {
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: 0.5s;
+}
+
+/* Clubs */
+
+.clubs:after {
+	content:'♣';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	line-height: 1;
+}
+
+/* Diamonds */
+
+.diamonds:after {
+	content:'♦';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	line-height: 1;
+}
+
+/* Spades */
+
+.spades:after {
+	content:'♠';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	line-height: 1;
+}
+
+/* Hearts */
+
+.hearts:after {
+	content:'♥';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	line-height: 1;
+}
+
+/* Ace */
+
+.card-back.ace {
+	margin: auto;
+	max-width: 140px;
+}
+.card.ace {
+	margin: 10px auto;
+}
+.card.ace i {
+	font-size: 60px;
+	line-height: 60px;
+	width: 60px;
+	height: 60px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/* 2 */
+
+.card.two i:first-of-type {
+	top: 15px;
+	left: 0;
+	right: 0;
+}
+.card.two i:last-of-type {
+	bottom: 15px;
+	left: 0;
+	right: 0;
+	transform: rotate(180deg);
+}
+
+/* 3 */
+
+.card.three i:first-of-type {
+	top: 15px;
+	left: 0;
+	right: 0;
+}
+.card.three i:nth-of-type(2) {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.card.three i:last-of-type {
+	bottom: 15px;
+	left: 0;
+	right: 0;
+	transform: rotate(180deg);
+}
+
+/* 4 */
+
+.card.four i:first-of-type {
+	top: 15px;
+	left: 20px;
+}
+.card.four i:nth-of-type(2) {
+	top: 15px;
+	right: 20px;
+}
+.card.four i:nth-of-type(3) {
+	bottom: 15px;
+	left: 20px;
+	transform: rotate(180deg);
+}
+.card.four i:last-of-type {
+	bottom: 15px;
+	right: 20px;
+	transform: rotate(180deg);
+}
+
+/* 5 */
+
+.card.five i:first-of-type {
+	top: 15px;
+	left: 20px;
+}
+.card.five i:nth-of-type(2) {
+	top: 15px;
+	right: 20px;
+}
+.card.five i:nth-of-type(3) {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.card.five i:nth-of-type(4) {
+	bottom: 15px;
+	left: 20px;
+	transform: rotate(180deg);
+}
+.card.five i:last-of-type {
+	bottom: 15px;
+	right: 20px;
+	transform: rotate(180deg);
+}
+
+/* 6 */
+
+.card.six i:first-of-type {
+	top: 15px;
+	left: 20px;
+}
+.card.six i:nth-of-type(2) {
+	top: 15px;
+	right: 20px;
+}
+.card.six i:nth-of-type(3) {
+	top: 0;
+	bottom: 0;
+	left: 20px;
+}
+.card.six i:nth-of-type(4) {
+	top: 0;
+	bottom: 0;
+	right: 20px;
+}
+.card.six i:nth-of-type(5) {
+	bottom: 15px;
+	left: 20px;
+	transform: rotate(180deg);
+}
+.card.six i:last-of-type {
+	bottom: 15px;
+	right: 20px;
+	transform: rotate(180deg);
+}
+
+/* 7 */
+
+.card.seven i:first-of-type {
+	top: 15px;
+	left: 20px;
+}
+.card.seven i:nth-of-type(2) {
+	top: 15px;
+	right: 20px;
+}
+.card.seven i:nth-of-type(3) {
+	top: 45px;
+	left: 0;
+	right: 0;
+}
+.card.seven i:nth-of-type(4) {
+	top: 0;
+	bottom: 0;
+	left: 20px;
+}
+.card.seven i:nth-of-type(5) {
+	top: 0;
+	bottom: 0;
+	right: 20px;
+}
+.card.seven i:nth-of-type(6) {
+	bottom: 15px;
+	left: 20px;
+	transform: rotate(180deg);
+}
+.card.seven i:last-of-type {
+	bottom: 15px;
+	right: 20px;
+	transform: rotate(180deg);
+}
+
+/* 8 */
+
+.card.eight i:first-of-type {
+	top: 15px;
+	left: 20px;
+}
+.card.eight i:nth-of-type(2) {
+	top: 15px;
+	right: 20px;
+}
+.card.eight i:nth-of-type(3) {
+	top: 45px;
+	left: 0;
+	right: 0;
+}
+.card.eight i:nth-of-type(4) {
+	top: 0;
+	bottom: 0;
+	left: 20px;
+}
+.card.eight i:nth-of-type(5) {
+	top: 0;
+	bottom: 0;
+	right: 20px;
+}
+.card.eight i:nth-of-type(6) {
+	bottom: 45px;
+	left: 0;
+	right: 0;
+	transform: rotate(180deg);
+}
+.card.eight i:nth-of-type(7) {
+	bottom: 15px;
+	left: 20px;
+	transform: rotate(180deg);
+}
+.card.eight i:last-of-type {
+	bottom: 15px;
+	right: 20px;
+	transform: rotate(180deg);
+}
+
+/* 9 */
+
+.card.nine i:first-of-type {
+	top: 15px;
+	left: 20px;
+}
+.card.nine i:nth-of-type(2) {
+	top: 15px;
+	right: 20px;
+}
+.card.nine i:nth-of-type(3) {
+	top: 55px;
+	left: 20px;
+}
+.card.nine i:nth-of-type(4) {
+	top: 55px;
+	right: 20px;
+}
+.card.nine i:nth-of-type(5) {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.card.nine i:nth-of-type(6) {
+	bottom: 55px;
+	left: 20px;
+	transform: rotate(180deg);
+}
+.card.nine i:nth-of-type(7) {
+	bottom: 55px;
+	right: 20px;
+	transform: rotate(180deg);
+}
+.card.nine i:nth-of-type(8) {
+	bottom: 15px;
+	left: 20px;
+	transform: rotate(180deg);
+}
+.card.nine i:last-of-type {
+	bottom: 15px;
+	right: 20px;
+	transform: rotate(180deg);
+}
+
+/* 10 */
+
+.card.ten i:first-of-type {
+	top: 15px;
+	left: 20px;
+}
+.card.ten i:nth-of-type(2) {
+	top: 15px;
+	right: 20px;
+}
+.card.ten i:nth-of-type(3) {
+	top: 55px;
+	left: 20px;
+}
+.card.ten i:nth-of-type(4) {
+	top: 55px;
+	right: 20px;
+}
+.card.ten i:nth-of-type(5) {
+	top: 40px;
+	left: 0;
+	right: 0;
+}
+.card.ten i:nth-of-type(6) {
+	bottom: 40px;
+	left: 0;
+	right: 0;
+	transform: rotate(180deg);
+}
+.card.ten i:nth-of-type(7) {
+	bottom: 55px;
+	left: 20px;
+	transform: rotate(180deg);
+}
+.card.ten i:nth-of-type(8) {
+	bottom: 55px;
+	right: 20px;
+	transform: rotate(180deg);
+}
+.card.ten i:nth-of-type(9) {
+	bottom: 15px;
+	left: 20px;
+	transform: rotate(180deg);
+}
+.card.ten i:last-of-type {
+	bottom: 15px;
+	right: 20px;
+	transform: rotate(180deg);
+}
