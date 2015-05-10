@@ -1,23 +1,50 @@
 body {
 	font-family: 'Jura', sans-serif;
 }
-
-.crd-container {
+.main-container {
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 20px;
 }
 .card {
-	border: 1px solid #000;
-	border-radius: 5px;
-	height: 200px;
-	width: 140px;
 	padding: 5px;
-	margin-top: 10px;
-	position: relative;
-	box-shadow: 2px 2px 2px rgba(13, 13, 13, 0.30);
-	opacity: 1;
 }
+.card, .card-back {
+	border: 1px solid #000;
+	box-shadow: 2px 2px 2px rgba(13, 13, 13, 0.30);
+}
+.card-container {
+	perspective: 1000;
+	margin: 10px auto;
+}
+.card-container:hover .flipper {
+	transform: rotateY(180deg);
+}
+.card-container, .card, .card-back {
+	width: 140px;
+	height: 200px;
+	border-radius: 5px;
+	position: relative;
+}
+.flipper {
+	transition: 0.4s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.card, .card-back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.card {
+	z-index: 2;
+}
+.card-back {
+	transform: rotateY(180deg);
+	background: url('../img/card-back.jpg') 80% 80%;
+}
+
 .card-red {
 	color: red;
 }
@@ -55,23 +82,8 @@ body {
 	margin: auto;
 }
 .card-back {
-	min-width: 140px;
 	border-radius: 5px;
-	background: transparent;
 	position: relative;
-}
-.face.back {
-	background: url('../img/card-back.jpg') 100% 100%;
-}
-.card-back:hover {
-	transform: rotateX(180deg);
-	-webkit-transform-style: preserve3d;
-	background: url('../img/card-back.jpg') 100% 100%;
-}
-.card-back:hover .card {
-	visibility: hidden;
-	transition: visibility 0s;
-	transform: rotateY(180deg);
 }
 
 .card {
@@ -121,12 +133,13 @@ body {
 
 /* Ace */
 
+.card.ace, .card-back.ace {
+	margin: auto;
+}
+
 .card-back.ace {
 	margin: auto;
 	max-width: 140px;
-}
-.card.ace {
-	margin: 10px auto;
 }
 .card.ace i {
 	font-size: 60px;
