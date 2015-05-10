@@ -14,7 +14,7 @@ body {
 	box-shadow: 2px 2px 2px rgba(13, 13, 13, 0.30);
 }
 .card-container {
-	perspective: 1000;
+	perspective: 1000px;
 	margin: 10px auto;
 }
 .card-container:hover .flipper {
